@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Wedding Card — Video UI (Complete with Bottom Buttons)</title>
+
+    <link rel="stylesheet" href="style.css" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Great+Vibes&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="thumbs" id="thumbs">
+        <div class="thumb" data-index="0" id="t0">
+          <img src="wedCardImage2.jpg" alt="page1" />
+        </div>
+
+        <div class="thumb" data-index="1" id="t1">
+          <img src="wedCardImage3.jpg" alt="page2" />
+        </div>
+
+        <div class="thumb" data-index="2" id="t2">
+          <img src="wedCardImage2.jpg" alt="page3" />
+        </div>
+
+        <div class="thumb-label">Pages</div>
+      </div>
+
+      <div class="card-wrap">
+        <div class="card" id="card">
+          <img id="cardImg" src="wedCardImage2.jpg" alt="card" />
+
+          <div class="text-block-container" id="textBlockContainer"></div>
+
+          <div id="cardControls">
+            <div class="arrow" id="prev" title="Previous">Back</div>
+            <div class="arrow" id="next" title="Next">Next</div>
+          </div>
+        </div>
+
+        <div class="pagination" id="pagination">
+          <div class="dot active" data-index="0"></div>
+          <div class="dot" data-index="1"></div>
+          <div class="dot" data-index="2"></div>
+        </div>
+      </div>
+
+      <div class="panel">
+        <h2>Text Editor</h2>
+
+        <button id="addTextBtn">Add New Text</button>
+
+        <div id="editorControls">
+          <label for="textEdit">Selected Text Content</label>
+          <textarea id="textEdit">
+Click a text block on the card to edit.</textarea
+          >
+
+          <label for="fontSelect">Font</label>
+          <select id="fontSelect">
+            <option value="'Playfair Display', serif">Playfair Display</option>
+            <option value="'Great Vibes', cursive">Great Vibes</option>
+            <option value="Arial, sans-serif">Arial</option>
+            <option value="Georgia, serif">Georgia</option>
+            <option value="'Courier New', monospace">Courier New</option>
+            <option value="'Times New Roman', serif">Times New Roman</option>
+          </select>
+
+          <label for="colorSelect">Color</label>
+          <input type="color" id="colorSelect" value="#3b2310" />
+
+          <label for="sizeRange">
+            Size
+            <span id="sizeVal" style="font-weight: 600">26px</span>
+          </label>
+          <input id="sizeRange" type="range" min="14" max="48" value="26" />
+        </div>
+
+        <div class="muted"></div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
